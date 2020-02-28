@@ -84,6 +84,19 @@
             }
 
             // create and play explosion sound
+
+                let audio = document.createElement('audio');
+
+audio.addEventListener("ended", function(){
+  document.body.removeChild(audio);
+});
+
+    audio.src="audio/explosion.mp3";
+
+    document.body.appendChild(audio);
+
+    audio.play();
+    
             
           }
         });
@@ -137,6 +150,17 @@
     bullets.push(newBullet);
 
     // create and play cheesy laser sound
+    let audio = document.createElement('audio');
+
+audio.addEventListener("ended", function(){
+  document.body.removeChild(audio);
+});
+
+    audio.src="audio/laser.mp3";
+
+    document.body.appendChild(audio);
+
+    audio.play();
     
   }
 
